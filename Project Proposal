@@ -1,7 +1,9 @@
 1. TRAFFIC CONTROL
 OBJECTIVE: Traffic lights along with license plate detection system and fine generation when the signal is broken.
 RTL OR SOFTWARE: RTL
-FUNCTIONALITY: The red, yellow and green traffic lights are depicted by the binary code 00, 01 and 10 respectively. We initiate a counter to coutdown the time until red turns into yellow and then into green. This is achieved by using mux, comparator and counters.
+FUNCTIONALITY: The red, yellow and green traffic lights are depicted by the binary code 00, 01 and 10 respectively. 
+               We initiate a counter to coutdown the time until red turns into yellow and then into green. 
+               This is achieved by using mux, comparator and counters.
 
 2.ELEVATOR SYSTEM
 OBJECTIVE: 
