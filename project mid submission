@@ -1,0 +1,42 @@
+TITLE : TRAFFIC LIGHTS
+
+Top module->
+module traffic_lights(red, yellow, green, Clk, push);
+input Clk;
+input [1:0]push;
+output reg [3:0]red;
+output reg [3:0]yellow;
+output reg [3:0]green;
+reg [4:0]counter;
+
+module timer_display();
+
+module signal_break(led,push,green);
+input [3:0]green;
+input [3:0]push;
+output reg [3:0]led;
+
+
+FPGA pins to be used:
+red[0]=U16
+yellow[0]=E19
+green[0]=U19
+red[1]=V19
+yellow[1]=W18
+green[1]=U15
+red[2]=U14
+yellow[2]=V14
+green[2]=V13
+red[3]=V3
+yellow[3]=W3
+green[3]=U3
+
+led[0]=P3
+led[1]=N3
+led[2]=P1
+led[3]=L1
+
+push[0]=T18
+push[1]=T17
+push[2]=U17
+push[3]=W19
