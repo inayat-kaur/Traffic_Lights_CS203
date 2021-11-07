@@ -8,11 +8,25 @@ output reg [3:0]red;
 output reg [3:0]yellow;
 output reg [3:0]green;
 reg [4:0]counter;
+wire [3:0]in0,in1,in2,in3;
 
-module timer_display();
+module timer_display(an,seg,in0,in1,in2,in3,Clk);
+input [3:0]an;
+input [3:0]in0;
+input [3:0]in1;
+input [3:0]in2;
+input [3:0]in3;
+input Clk;
+output reg [6:0]seg;
+wire [6:0]seg0,seg1,seg2,seg3;
+reg[14:0]seg_clk;
 
-module signal_break(led,push,green);
-input [3:0]green;
+module segment_decoder(seg,in)
+input [3:0]seg;
+output reg [6:0]seg;
+
+module signal_break(led,push,green); //pressing a push button indicates that the traffic light has been broken, 
+input [3:0]green;                       depending on which button is pressed, the led corresponding to that traffic light will switch on
 input [3:0]push;
 output reg [3:0]led;
 
@@ -40,3 +54,5 @@ push[0]=T18
 push[1]=T17
 push[2]=U17
 push[3]=W19
+
+All the display pins
