@@ -1,12 +1,10 @@
 module traffic_light(red,yellow,green,counter,Clk);
-output reg Clk;
+input Clk;
 output reg [4:0]counter;
 output reg [3:0]red;
 output reg [3:0]yellow;
 output reg [3:0]green;
 reg random;
-initial Clk=1'b0;
-always #5 Clk=~Clk;
 initial 
 begin
 red[0]=1'b0;
