@@ -1,0 +1,69 @@
+module traffic_light(red,yellow,green,counter,Clk);
+output reg Clk;
+output reg [4:0]counter;
+output reg [3:0]red;
+output reg [3:0]yellow;
+output reg [3:0]green;
+reg random;
+initial Clk=1'b0;
+always #5 Clk=~Clk;
+initial 
+begin
+red[0]=1'b0;
+red[1]=1'b0;
+red[2]=1'b1;
+red[3]=1'b1;
+yellow[0]=1'b0;
+yellow[1]=1'b1;
+yellow[2]=1'b0;
+yellow[3]=1'b0;
+green[0]=1'b1;
+green[1]=1'b0;
+green[2]=1'b0;
+green[3]=1'b0;
+counter=5'b00000;
+end
+always @(posedge Clk)
+begin
+    counter<=counter+1;
+    case(counter)
+    5'b00101: 
+    begin
+        red[0]=1'b1;
+        green[0]=1'b0;
+        yellow[1]=1'b0;
+        green[1]=1'b1;
+        red[2]=1'b0;
+        yellow[2]=1'b1;
+    end
+    5'b01010:
+    begin
+        red[1]=1'b1;
+        green[1]=1'b0;
+        yellow[2]=1'b0;
+        green[2]=1'b1;
+        red[3]=1'b0;
+        yellow[3]=1'b1;
+    end
+    5'b01111:
+    begin
+        red[2]=1'b1;
+        green[2]=1'b0;
+        yellow[3]=1'b0;
+        green[3]=1'b1;
+        red[0]=1'b0;
+        yellow[0]=1'b1;
+    end
+    5'b10100:
+    begin
+        red[3]=1'b1;
+        green[3]=1'b0;
+        yellow[0]=1'b0;
+        green[0]=1'b1;
+        red[1]=1'b0;
+        yellow[1]=1'b1;
+        counter=0;
+    end
+    endcase
+end
+endmodule
