@@ -5,6 +5,7 @@ output reg [3:0]red;
 output reg [3:0]yellow;
 output reg [3:0]green;
 reg random;
+
 initial 
 begin
 red[0]=1'b0;
@@ -21,8 +22,18 @@ green[2]=1'b0;
 green[3]=1'b0;
 counter=5'b00000;
 end
-always @(posedge Clk)
+
+reg [26:0] lights_clk=0;
+
+always @(posedge clk) begin
+    lights_clk<=lights_clk+1;
+end
+
+always @(posedge clk)
 begin
+    if(lights_clk==100000000)
+    begin
+    lights_clk=0;
     counter<=counter+1;
     case(counter)
     5'b00101: 
@@ -63,5 +74,7 @@ begin
         counter=0;
     end
     endcase
+    end
 end
+
 endmodule
