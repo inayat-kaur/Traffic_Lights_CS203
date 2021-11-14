@@ -1,0 +1,33 @@
+module signal_break(led,btnU,btnR,btnD,btnL,green);
+input [3:0]green;
+input btnU,btnR,btnD,btnL;
+output reg [3:0]led;
+initial led=4'b0000;
+
+always @(btnU or btnR or btnD or btnL)
+begin
+    if(btnU==1)
+    begin
+        if(green[0]==1)
+            led[0]=1;
+    end
+
+    if(btnR==1)
+    begin
+        if(green[1]==1)
+            led[1]=0;
+    end
+
+    if(btnD==1)
+    begin
+        if(green[2]==1)
+            led[2]=1;
+    end
+
+    if(btnL==1)
+    begin
+        if(green[3]==1)
+            led[3]=1;
+    end
+end
+endmodule
