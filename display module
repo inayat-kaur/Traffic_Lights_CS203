@@ -52,7 +52,7 @@ module segment_decode(seg_temp,in);
         else if(in==4'b0110)seg_temp<=7'b0000010;
         else if(in==4'b0111)seg_temp<=7'b1111000;
         else if(in==4'b1000)seg_temp<=7'b0000000;
-        else seg_temp<=7'b0010000;
+        else if(in==4'b1001)seg_temp<=7'b0010000;
     end
 endmodule
 
