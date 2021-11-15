@@ -191,8 +191,8 @@ set_property PACKAGE_PIN W4 [get_ports {an[3]}]
 #set_property PACKAGE_PIN P18 [get_ports {JC[3]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[3]}]
 ##Sch name = JC7
-#set_property PACKAGE_PIN L17 [get_ports {JC[4]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[4]}]
+set_property PACKAGE_PIN L17 [get_ports {buzzer}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {buzzer}]
 ##Sch name = JC8
 #set_property PACKAGE_PIN M19 [get_ports {JC[5]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[5]}]
@@ -200,8 +200,8 @@ set_property PACKAGE_PIN W4 [get_ports {an[3]}]
 #set_property PACKAGE_PIN P17 [get_ports {JC[6]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[6]}]
 ##Sch name = JC10
-#set_property PACKAGE_PIN R18 [get_ports {JC[7]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]
+#set_property PACKAGE_PIN R18 [get_ports {buzzer}]					
+	#set_property IOSTANDARD LVCMOS33 [get_ports {buzzer}]
 
 
 ##Pmod Header JXADC
@@ -292,5 +292,3 @@ set_property PACKAGE_PIN W4 [get_ports {an[3]}]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {QspiDB[3]}]
 #set_property PACKAGE_PIN K19 [get_ports QspiCSn]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports QspiCSn]
-
-
