@@ -9,10 +9,10 @@
 TRAFFIC CONTROL SYSTEM 
 
 **MODULES USED**
-traffic_light(red,yellow,green,an,seg,light0,light1,light2,light3,clk,reset,led,buzzer);
-input clk,reset;
-reg [4:0]counter;
-output reg [3:0]red;
+traffic_light(red,yellow,green,an,seg,light0,light1,light2,light3,clk,reset,led,buzzer);<br />
+input clk,reset;<br />
+reg [4:0]counter;<br />
+output reg [3:0]red;<br />
 output reg [3:0]yellow;
 output reg [3:0]green;
 output [3:0] an;
