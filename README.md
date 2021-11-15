@@ -5,10 +5,10 @@
 2. INAYAT KAUR     (2020CSB1088)
 3. ISHA GOYAL      (2020CSB1089)
 
-**PROJECT NAME**
+**PROJECT NAME**<br />
 TRAFFIC CONTROL SYSTEM 
 
-**MODULES USED**
+**MODULES USED**<br />
 traffic_light(red,yellow,green,an,seg,light0,light1,light2,light3,clk,reset,led,buzzer);<br />
 input clk,reset;<br />
 reg [4:0]counter;<br />
@@ -45,7 +45,7 @@ input reset;<br />
 output reg buzzer;<br />
 output reg [3:0]led;<br />
 
-**FPGA PINS USED**
+**FPGA PINS USED**<br />
 clk=W5<br />
 
 red[0]=L1<br />
