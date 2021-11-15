@@ -1,4 +1,4 @@
-module traffic_light(red,yellow,green,an,seg,clk,light0,light1,light2,light3,led,reset);
+module traffic_light(red,yellow,green,an,seg,light0,light1,light2,light3,clk,reset,led,buzzer);
 input clk,reset;
 reg [4:0]counter;
 output reg [3:0]red;
@@ -7,6 +7,7 @@ output reg [3:0]green;
 output [3:0] an;
 output [3:0] led;
 output [6:0] seg;
+output buzzer;
 input light0,light1,light2,light3;
 reg [3:0] counters0;
 reg [3:0] counters1;
@@ -37,7 +38,7 @@ end
 
 reg [26:0] lights_clk=0;
 timer_display displaytime(an,seg,counters0,counters1,counters2,counters3,clk,reset);
-signal_break sb(led,light0,light1,light2,light3,green,reset);
+signal_break sb(led,light0,light1,light2,light3,green,reset,buzzer);
 
 always @(posedge clk or posedge reset) begin
     if(reset==1)begin
