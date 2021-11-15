@@ -20,24 +20,32 @@ begin
     begin
         if(green[0]==0)
             led[0]=1;
+        else
+            led[0]=0;
     end
 
     if(light1==1)
     begin
         if(green[1]==0)
             led[1]=1;
+        else
+            led[1]=0;
     end
 
     if(light2==1)
     begin
         if(green[2]==0)
             led[2]=1;
+        else
+            led[0]=0;
     end
 
     if(light3==1)
     begin
         if(green[3]==0)
             led[3]=1;
+        else
+            led[0]=0;
     end
     end
 end
